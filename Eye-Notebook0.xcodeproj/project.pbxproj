@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,22 @@
 		8D91CD9723CEF61400EB85C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D91CD9523CEF61400EB85C4 /* Main.storyboard */; };
 		8D91CD9923CEF61600EB85C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D91CD9823CEF61600EB85C4 /* Assets.xcassets */; };
 		8D91CD9C23CEF61600EB85C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D91CD9A23CEF61600EB85C4 /* LaunchScreen.storyboard */; };
+		8D91CDA423CF07EB00EB85C4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CDA323CF07EB00EB85C4 /* RegisterViewController.swift */; };
+		8D91CDA723CF0C9800EB85C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CDA623CF0C9800EB85C4 /* HomeViewController.swift */; };
+		8D91CDA923CF129100EB85C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D91CDA823CF129100EB85C4 /* GoogleService-Info.plist */; };
+		8D91CDAB23CF633200EB85C4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CDAA23CF633200EB85C4 /* ProfileViewController.swift */; };
+		8D91CDAD23CF8CC200EB85C4 /* PatientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CDAC23CF8CC200EB85C4 /* PatientsViewController.swift */; };
+		8D91CDAF23CF941100EB85C4 /* LocalReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CDAE23CF941100EB85C4 /* LocalReviewsViewController.swift */; };
+		8D91CDB123CF9D0000EB85C4 /* CreatePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CDB023CF9D0000EB85C4 /* CreatePatientViewController.swift */; };
+		8D91CDB323CF9E4700EB85C4 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CDB223CF9E4700EB85C4 /* NotesViewController.swift */; };
+		8D91CDB523CF9FBD00EB85C4 /* PatientReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CDB423CF9FBD00EB85C4 /* PatientReviewViewController.swift */; };
+		8D91CDB723CFA18D00EB85C4 /* NewExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CDB623CFA18D00EB85C4 /* NewExaminationViewController.swift */; };
+		F1335CE27AEC33B4A286A85E /* Pods_Eye_Notebook0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A3313E7AEF0FD2FD5E7DE9 /* Pods_Eye_Notebook0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		615C5C18651A70719C1AF245 /* Pods-Eye-Notebook0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eye-Notebook0.debug.xcconfig"; path = "Target Support Files/Pods-Eye-Notebook0/Pods-Eye-Notebook0.debug.xcconfig"; sourceTree = "<group>"; };
+		82A3313E7AEF0FD2FD5E7DE9 /* Pods_Eye_Notebook0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eye_Notebook0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D91CD8C23CEF61400EB85C4 /* Eye-Notebook0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eye-Notebook0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D91CD8F23CEF61400EB85C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D91CD9123CEF61400EB85C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +37,17 @@
 		8D91CD9823CEF61600EB85C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D91CD9B23CEF61600EB85C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D91CD9D23CEF61600EB85C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D91CDA323CF07EB00EB85C4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8D91CDA623CF0C9800EB85C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8D91CDA823CF129100EB85C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8D91CDAA23CF633200EB85C4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8D91CDAC23CF8CC200EB85C4 /* PatientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsViewController.swift; sourceTree = "<group>"; };
+		8D91CDAE23CF941100EB85C4 /* LocalReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalReviewsViewController.swift; sourceTree = "<group>"; };
+		8D91CDB023CF9D0000EB85C4 /* CreatePatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePatientViewController.swift; sourceTree = "<group>"; };
+		8D91CDB223CF9E4700EB85C4 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		8D91CDB423CF9FBD00EB85C4 /* PatientReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientReviewViewController.swift; sourceTree = "<group>"; };
+		8D91CDB623CFA18D00EB85C4 /* NewExaminationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExaminationViewController.swift; sourceTree = "<group>"; };
+		A2D9EE46DAD3EC8E531963B8 /* Pods-Eye-Notebook0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eye-Notebook0.release.xcconfig"; path = "Target Support Files/Pods-Eye-Notebook0/Pods-Eye-Notebook0.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1335CE27AEC33B4A286A85E /* Pods_Eye_Notebook0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58EBD3D55266BEB9AD46E40B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82A3313E7AEF0FD2FD5E7DE9 /* Pods_Eye_Notebook0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8D91CD8323CEF61400EB85C4 = {
 			isa = PBXGroup;
 			children = (
 				8D91CD8E23CEF61400EB85C4 /* Eye-Notebook0 */,
 				8D91CD8D23CEF61400EB85C4 /* Products */,
+				BDBF18CCEED943B6BAE54E1E /* Pods */,
+				58EBD3D55266BEB9AD46E40B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +93,40 @@
 			children = (
 				8D91CD8F23CEF61400EB85C4 /* AppDelegate.swift */,
 				8D91CD9123CEF61400EB85C4 /* SceneDelegate.swift */,
-				8D91CD9323CEF61400EB85C4 /* ViewController.swift */,
 				8D91CD9523CEF61400EB85C4 /* Main.storyboard */,
 				8D91CD9823CEF61600EB85C4 /* Assets.xcassets */,
 				8D91CD9A23CEF61600EB85C4 /* LaunchScreen.storyboard */,
 				8D91CD9D23CEF61600EB85C4 /* Info.plist */,
+				8D91CDA823CF129100EB85C4 /* GoogleService-Info.plist */,
+				8D91CDA523CF07F300EB85C4 /* Controllers */,
 			);
 			path = "Eye-Notebook0";
+			sourceTree = "<group>";
+		};
+		8D91CDA523CF07F300EB85C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D91CD9323CEF61400EB85C4 /* ViewController.swift */,
+				8D91CDA323CF07EB00EB85C4 /* RegisterViewController.swift */,
+				8D91CDA623CF0C9800EB85C4 /* HomeViewController.swift */,
+				8D91CDAA23CF633200EB85C4 /* ProfileViewController.swift */,
+				8D91CDAC23CF8CC200EB85C4 /* PatientsViewController.swift */,
+				8D91CDAE23CF941100EB85C4 /* LocalReviewsViewController.swift */,
+				8D91CDB023CF9D0000EB85C4 /* CreatePatientViewController.swift */,
+				8D91CDB223CF9E4700EB85C4 /* NotesViewController.swift */,
+				8D91CDB423CF9FBD00EB85C4 /* PatientReviewViewController.swift */,
+				8D91CDB623CFA18D00EB85C4 /* NewExaminationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BDBF18CCEED943B6BAE54E1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				615C5C18651A70719C1AF245 /* Pods-Eye-Notebook0.debug.xcconfig */,
+				A2D9EE46DAD3EC8E531963B8 /* Pods-Eye-Notebook0.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D91CDA023CEF61600EB85C4 /* Build configuration list for PBXNativeTarget "Eye-Notebook0" */;
 			buildPhases = (
+				C0A289F91AD889FCB47E3377 /* [CP] Check Pods Manifest.lock */,
 				8D91CD8823CEF61400EB85C4 /* Sources */,
 				8D91CD8923CEF61400EB85C4 /* Frameworks */,
 				8D91CD8A23CEF61400EB85C4 /* Resources */,
+				A1C2155B825AB09AEE3A5ED1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D91CD9C23CEF61600EB85C4 /* LaunchScreen.storyboard in Resources */,
+				8D91CDA923CF129100EB85C4 /* GoogleService-Info.plist in Resources */,
 				8D91CD9923CEF61600EB85C4 /* Assets.xcassets in Resources */,
 				8D91CD9723CEF61400EB85C4 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +198,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A1C2155B825AB09AEE3A5ED1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eye-Notebook0/Pods-Eye-Notebook0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eye-Notebook0/Pods-Eye-Notebook0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eye-Notebook0/Pods-Eye-Notebook0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0A289F91AD889FCB47E3377 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eye-Notebook0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D91CD8823CEF61400EB85C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D91CDAB23CF633200EB85C4 /* ProfileViewController.swift in Sources */,
+				8D91CDA723CF0C9800EB85C4 /* HomeViewController.swift in Sources */,
+				8D91CDAD23CF8CC200EB85C4 /* PatientsViewController.swift in Sources */,
 				8D91CD9423CEF61400EB85C4 /* ViewController.swift in Sources */,
+				8D91CDAF23CF941100EB85C4 /* LocalReviewsViewController.swift in Sources */,
+				8D91CDB123CF9D0000EB85C4 /* CreatePatientViewController.swift in Sources */,
+				8D91CDB323CF9E4700EB85C4 /* NotesViewController.swift in Sources */,
+				8D91CDB723CFA18D00EB85C4 /* NewExaminationViewController.swift in Sources */,
+				8D91CDB523CF9FBD00EB85C4 /* PatientReviewViewController.swift in Sources */,
 				8D91CD9023CEF61400EB85C4 /* AppDelegate.swift in Sources */,
 				8D91CD9223CEF61400EB85C4 /* SceneDelegate.swift in Sources */,
+				8D91CDA423CF07EB00EB85C4 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,11 +398,13 @@
 		};
 		8D91CDA123CEF61600EB85C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 615C5C18651A70719C1AF245 /* Pods-Eye-Notebook0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SAQ3H6MLH6;
 				INFOPLIST_FILE = "Eye-Notebook0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +418,13 @@
 		};
 		8D91CDA223CEF61600EB85C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2D9EE46DAD3EC8E531963B8 /* Pods-Eye-Notebook0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SAQ3H6MLH6;
 				INFOPLIST_FILE = "Eye-Notebook0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

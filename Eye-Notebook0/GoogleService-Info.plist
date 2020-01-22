@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>672020328911-qpstj8mh96hqi353bmuv7m1qjvei5k29.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.672020328911-qpstj8mh96hqi353bmuv7m1qjvei5k29</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA6WS7rcVoHiqIjr4Ag6vTPAyeZTRQjb_U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>672020328911</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sriharsha.Eye-Notebook0</string>
+	<key>PROJECT_ID</key>
+	<string>eye-notebook0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eye-notebook0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:672020328911:ios:d4149aef49e04e722962ba</string>
+	<key>DATABASE_URL</key>
+	<string>https://eye-notebook0.firebaseio.com</string>
+</dict>
+</plist>
