@@ -8,9 +8,10 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 class HomeViewController: UIViewController {
 
-    
+    var ref: DatabaseReference! = Database.database().reference()
     @IBOutlet weak var currentUserLabel: UILabel!
     
     override func viewDidLoad() {

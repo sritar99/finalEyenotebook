@@ -8,10 +8,10 @@
 
 import UIKit
 import Firebase
-
+import FirebaseDatabase
 class RegisterViewController: UIViewController {
-
-    let db = Firestore.firestore()
+//    let defaults = UserDefaults.standard
+    var ref: DatabaseReference! = Database.database().reference()
     @IBOutlet weak var firstnameTextField: UITextField!
     
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -33,22 +33,25 @@ class RegisterViewController: UIViewController {
     
     @IBAction func signUpKeyPress(_ sender: UIButton) {
 
+        
         if let firstname = firstnameTextField.text, let lastname = lastNameTextField.text,let email = emailTextField.text, let password = passwordTextField.text,let speciality = medicalTextField.text, let institution = instNameTextFiled.text{
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error{
                     print(e)
                 }else{
-                    self.db.collection("UserInfo").document("Profile").setData([
+                    let profileDict = [
                         "firstname": firstname,
                         "lastname": lastname,
                         "email": email,
                         "medicalSpeciality": speciality,
-                        "institution": institution
-                    ]) { err in
-                        if let err = err {
-                            print("Error writing document: \(err)")
-                        } else {
-                            print("Document successfully written!")
+                        "institution": institution]
+                    
+                    self.ref.child("DoctorsProfile").child(firstname).childByAutoId().setValue(profileDict) { (error, reference) in
+                        if let e1 = error{
+                            print(e1)
+                        }
+                        else {
+                            print("Profile saved")
                         }
                     }
                     self.performSegue(withIdentifier: "goToHome" , sender:self)

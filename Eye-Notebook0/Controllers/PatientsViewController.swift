@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
+import Firebase
 class PatientsViewController: UIViewController {
-
+    var ref: DatabaseReference! = Database.database().reference().child("PatientsProfile")
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Patients"

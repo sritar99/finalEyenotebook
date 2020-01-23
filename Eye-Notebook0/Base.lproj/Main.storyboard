@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077.5999999999999" y="126.38680659670166"/>
+            <point key="canvasLocation" x="137" y="-246"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Rpr-i3-D2M">
@@ -262,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84H-7r-O1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="975"/>
+            <point key="canvasLocation" x="-1375" y="1341"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="kTM-2j-NiJ">
@@ -306,7 +306,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="patientsIcon"/>
                                 <connections>
-                                    <segue destination="Vhe-OC-mY5" kind="show" id="7lc-yU-ndI"/>
+                                    <segue destination="Vhe-OC-mY5" kind="show" identifier="goToPatientsList" id="7lc-yU-ndI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYs-id-Gkx">
@@ -332,7 +332,7 @@
                                     <color key="titleColor" red="0.062745098040000002" green="0.53725490200000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yQO-Pm-XNq" kind="show" id="Tl5-eW-uKz"/>
+                                    <segue destination="yQO-Pm-XNq" kind="show" identifier="goToCreatePatient" id="Tl5-eW-uKz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyL-Rb-vEG">
@@ -403,7 +403,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhW-iD-qkG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="126.38680659670166"/>
+            <point key="canvasLocation" x="-1530" y="-246"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="lz5-tF-nej">
@@ -502,12 +502,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqa-QE-yxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2936.8000000000002" y="544.67766116941539"/>
+            <point key="canvasLocation" x="2961" y="-246"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gVi-dA-JD0">
             <objects>
-                <viewController id="15p-GX-HVV" sceneMemberID="viewController">
+                <viewController definesPresentationContext="YES" modalPresentationStyle="fullScreen" id="15p-GX-HVV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B8q-ci-LuD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -520,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAX-as-7on" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2937" y="-174"/>
+            <point key="canvasLocation" x="5820" y="-246"/>
         </scene>
         <!--Patients View Controller-->
         <scene sceneID="WxI-kP-mPa">
@@ -535,14 +535,17 @@
                     <navigationItem key="navigationItem" id="DLA-DN-Z27">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus.circle" catalog="system" id="fdH-4f-0at">
                             <connections>
-                                <segue destination="yQO-Pm-XNq" kind="show" id="S85-KT-uQ1"/>
+                                <segue destination="yQO-Pm-XNq" kind="show" identifier="goToCreatePatient" id="S85-KT-uQ1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="LaY-da-XI6" kind="show" identifier="goToHome" id="QMi-CD-U0W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVD-fB-M8T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2476" y="1487"/>
+            <point key="canvasLocation" x="2049" y="1890"/>
         </scene>
         <!--Local Reviews View Controller-->
         <scene sceneID="iep-NI-r8c">
@@ -555,10 +558,13 @@
                         <viewLayoutGuide key="safeArea" id="ueK-Mf-OW7"/>
                     </view>
                     <navigationItem key="navigationItem" id="YIM-iR-KYr"/>
+                    <connections>
+                        <segue destination="LaY-da-XI6" kind="show" identifier="goToHome" id="piW-QD-0h6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrr-TW-QIT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="1487"/>
+            <point key="canvasLocation" x="137" y="1890"/>
         </scene>
         <!--Patient Review View Controller-->
         <scene sceneID="Ew2-Zl-NI1">
@@ -573,7 +579,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKf-rk-8gs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049" y="2327"/>
+            <point key="canvasLocation" x="1286" y="2741"/>
         </scene>
         <!--Create Patient View Controller-->
         <scene sceneID="RSW-6e-DWo">
@@ -703,7 +709,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ypo-WY-AUH" kind="show" id="V4B-33-dr6"/>
+                                    <segue destination="aQP-v9-6oN" kind="show" identifier="goToExam" id="sGa-F0-hcJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhF-2n-cqi">
@@ -729,7 +735,11 @@
                         <viewLayoutGuide key="safeArea" id="gu8-mu-ajt"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nea-h5-OWW">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="ifw-Tm-cU8"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ifw-Tm-cU8">
+                            <connections>
+                                <action selector="createSaveKey:" destination="yQO-Pm-XNq" id="AfP-68-dcK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="AssesmentTF" destination="MbV-q5-xVZ" id="NuJ-1k-Jvz"/>
@@ -745,25 +755,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJ9-Fz-LRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3381.5999999999999" y="1631.3343328335834"/>
+            <point key="canvasLocation" x="4364" y="2104"/>
         </scene>
         <!--New Examination View Controller-->
-        <scene sceneID="RLs-e0-zJi">
+        <scene sceneID="XE7-2d-f6Y">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Ypo-WY-AUH" customClass="NewExaminationViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TJh-n8-yT7">
+                <viewController modalPresentationStyle="fullScreen" id="aQP-v9-6oN" customClass="NewExaminationViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hnV-zG-zQE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Db-al-R2S"/>
+                        <viewLayoutGuide key="safeArea" id="hDv-bb-TH6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="n0K-nx-Bja">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="wmb-zs-cJ1"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ZRy-qv-L0P"/>
+                    <connections>
+                        <segue destination="yQO-Pm-XNq" kind="show" identifier="goToCreatePatient" id="qCk-Bg-P4y"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fce-8j-6AI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lg-fM-O5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4154" y="1526"/>
+            <point key="canvasLocation" x="6782" y="1189"/>
         </scene>
     </scenes>
     <resources>
@@ -777,7 +788,7 @@
         <image name="profileIcon" width="170.5" height="170.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tl5-eW-uKz"/>
-        <segue reference="94B-fC-aQ2"/>
+        <segue reference="qCk-Bg-P4y"/>
+        <segue reference="piW-QD-0h6"/>
     </inferredMetricsTieBreakers>
 </document>

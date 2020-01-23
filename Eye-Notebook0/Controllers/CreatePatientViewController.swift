@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import Firebase
 class CreatePatientViewController: UIViewController {
-
+    var ref: DatabaseReference! = Database.database().reference().child("PatientsProfile")
+    var gender = "Male"
     @IBOutlet weak var fstNameTF: UITextField!
     
     
@@ -46,8 +48,11 @@ class CreatePatientViewController: UIViewController {
         if femaleCheck.isSelected{
             femaleCheck.isSelected = false
             maleCheck.isSelected = true
+            gender = "Male"
+            
         }else{
             maleCheck.isSelected = true
+            gender = "Male"
         }
     }
     
@@ -57,10 +62,59 @@ class CreatePatientViewController: UIViewController {
         if maleCheck.isSelected{
             maleCheck.isSelected = false
             femaleCheck.isSelected = true
+            gender = "FeMale"
         }else{
             femaleCheck.isSelected = true
+            gender = "FeMale"
         }
     }
+    
+    
+
+    @IBAction func createSaveKey(_ sender: UIBarButtonItem) {
+        let sex = gender
+        if let firstname = fstNameTF.text, let lastname = lastNameTF.text,let patientId = patientID.text, let dOfBirth = dobTF.text,let recommendations = recommendTF.text, let visualActivity = visualTF.text{
+            let patientProDict = [
+                "firstname": firstname,
+                "lastname": lastname,
+                "patientId": patientId,
+                "dOfBirth": dOfBirth,
+                //                        "left-eyeImage":*****,
+                //                        "right-eyeImage":****,
+                "sex":sex,
+                "recommendations": recommendations,
+                "visualActivity":visualActivity
+            ]
+            
+            self.ref.child(firstname).childByAutoId().setValue(patientProDict) { (error, reference) in
+                if let e1 = error{
+                    print(e1)
+                }
+                else {
+                    print("Patient profile Added Successfully")
+                }
+            }
+            
+            navigationController?.popViewController(animated: true)
+
+        
+        }
+    
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -70,5 +124,5 @@ class CreatePatientViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+

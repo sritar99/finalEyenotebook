@@ -8,9 +8,10 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 class ProfileViewController: UIViewController {
 
-    
+    var ref: DatabaseReference! = Database.database().reference().child("DoctorsProfile").child("sriharsha")
     @IBOutlet weak var firstNameLabel: UILabel!
     
     
@@ -24,29 +25,44 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var institutionLabel: UILabel!
     
     
-    let db = Firestore.firestore()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
-        loadProfile()
-        // Do any additional setup after loading the view.
-    }
-    func loadProfile(){
-        db.collection("UserInfo").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-                    self.firstNameLabel.text = document.data()["firstname"] as? String
-                    self.lastNameLabel.text = document.data()["lastname"] as? String
-                    self.emailLabel.text = document.data()["email"] as? String
-                    self.specialityLabel.text = document.data()["medicalSpeciality"] as? String
-                    self.institutionLabel.text = document.data()["institution"] as? String
-                }
-            }
+        
+        
+        ref.observe(.childAdded) { (snapShot) in
+            let snapShotValue = snapShot.value as! Dictionary<String,String>
+            self.institutionLabel.text = snapShotValue["institution"]!
+            self.firstNameLabel.text = snapShotValue["firstname"]!
+            self.lastNameLabel.text = snapShotValue["lastname"]!
+            self.emailLabel.text = snapShotValue["email"]!
+            self.specialityLabel.text = snapShotValue["medicalSpeciality"]!
         }
+        
+//        db.collection("UserInfo").getDocuments() { (querySnapshot, err) in
+//                    if let err = err {
+//                        print("Error getting documents: \(err)")
+//                    } else {
+//                        for document in querySnapshot!.documents {
+//        //                    print("\(document.documentID) => \(document.data())")
+//                            self.firstNameLabel.text = document.data()["firstname"] as? String
+//                            self.lastNameLabel.text = document.data()["lastname"] as? String
+//                            self.emailLabel.text = document.data()["email"] as? String
+//                            self.specialityLabel.text = document.data()["medicalSpeciality"] as? String
+//                            self.institutionLabel.text = document.data()["institution"] as? String
+//                        }
+//                    }
+//                }
+        
+        
+        
+        
+        
+        // Do any additional setup after loading the view.
+        
     }
+
     
     
     

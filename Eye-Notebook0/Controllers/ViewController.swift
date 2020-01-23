@@ -9,9 +9,11 @@
 import UIKit
 //import CLTypingLabel
 import Firebase
+import FirebaseDatabase
 
 class ViewController: UIViewController {
-
+    var ref: DatabaseReference! = Database.database().reference()
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var userNameTextField: UITextField!

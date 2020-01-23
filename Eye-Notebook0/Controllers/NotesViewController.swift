@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
+import Firebase
 class NotesViewController: UIViewController {
-
+    var ref: DatabaseReference! = Database.database().reference()
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Notes"
