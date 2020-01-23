@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 class HomeViewController: UIViewController {
 
-    var ref: DatabaseReference! = Database.database().reference()
+    var ref: DatabaseReference! 
     @IBOutlet weak var currentUserLabel: UILabel!
     
     override func viewDidLoad() {
@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
 //        navigationItem.hidesBackButton = true
         title = "Eye-notebook"
         navigationItem.hidesBackButton = true
+        ref = Database.database().reference()
         
         currentUserLabel.text = Auth.auth().currentUser?.email
         // Do any additional setup after loading the view.

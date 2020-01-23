@@ -1,28 +1,25 @@
 //
-//  NewExaminationViewController.swift
+//  AcquisitionViewController.swift
 //  Eye-Notebook0
 //
-//  Created by Sri Harsha on 16/01/20.
+//  Created by Sri Harsha on 23/01/20.
 //  Copyright © 2020 Sri Harsha. All rights reserved.
 //
 
 import UIKit
-import FirebaseDatabase
 import Firebase
-class NewExaminationViewController: UIViewController {
+import FirebaseDatabase
+import Foundation
+class AcquisitionViewController: UIViewController {
     var ref: DatabaseReference!
-        
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "New Examination"
+        title = "Acquisitions"
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
     
 
-    @IBAction func saveKey(_ sender: UIBarButtonItem) {
-        
-    }
     /*
     // MARK: - Navigation
 

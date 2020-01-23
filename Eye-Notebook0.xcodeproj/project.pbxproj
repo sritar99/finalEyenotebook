@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D90110623D9E59C004FB68E /* AcquisitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90110523D9E59C004FB68E /* AcquisitionViewController.swift */; };
+		8D90110823D9F0F7004FB68E /* PatientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90110723D9F0F7004FB68E /* PatientsList.swift */; };
+		8D90110C23DA039E004FB68E /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90110A23DA039E004FB68E /* ListCell.swift */; };
+		8D90110D23DA039E004FB68E /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D90110B23DA039E004FB68E /* ListCell.xib */; };
 		8D91CD9023CEF61400EB85C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CD8F23CEF61400EB85C4 /* AppDelegate.swift */; };
 		8D91CD9223CEF61400EB85C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CD9123CEF61400EB85C4 /* SceneDelegate.swift */; };
 		8D91CD9423CEF61400EB85C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91CD9323CEF61400EB85C4 /* ViewController.swift */; };
@@ -29,6 +33,10 @@
 /* Begin PBXFileReference section */
 		615C5C18651A70719C1AF245 /* Pods-Eye-Notebook0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eye-Notebook0.debug.xcconfig"; path = "Target Support Files/Pods-Eye-Notebook0/Pods-Eye-Notebook0.debug.xcconfig"; sourceTree = "<group>"; };
 		82A3313E7AEF0FD2FD5E7DE9 /* Pods_Eye_Notebook0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eye_Notebook0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D90110523D9E59C004FB68E /* AcquisitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcquisitionViewController.swift; sourceTree = "<group>"; };
+		8D90110723D9F0F7004FB68E /* PatientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsList.swift; sourceTree = "<group>"; };
+		8D90110A23DA039E004FB68E /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		8D90110B23DA039E004FB68E /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		8D91CD8C23CEF61400EB85C4 /* Eye-Notebook0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eye-Notebook0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D91CD8F23CEF61400EB85C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D91CD9123CEF61400EB85C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +78,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8D90110923D9F0FD004FB68E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D90110723D9F0F7004FB68E /* PatientsList.swift */,
+				8D90110A23DA039E004FB68E /* ListCell.swift */,
+				8D90110B23DA039E004FB68E /* ListCell.xib */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8D91CD8323CEF61400EB85C4 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +116,7 @@
 				8D91CD9A23CEF61600EB85C4 /* LaunchScreen.storyboard */,
 				8D91CD9D23CEF61600EB85C4 /* Info.plist */,
 				8D91CDA823CF129100EB85C4 /* GoogleService-Info.plist */,
+				8D90110923D9F0FD004FB68E /* Model */,
 				8D91CDA523CF07F300EB85C4 /* Controllers */,
 			);
 			path = "Eye-Notebook0";
@@ -116,6 +135,7 @@
 				8D91CDB223CF9E4700EB85C4 /* NotesViewController.swift */,
 				8D91CDB423CF9FBD00EB85C4 /* PatientReviewViewController.swift */,
 				8D91CDB623CFA18D00EB85C4 /* NewExaminationViewController.swift */,
+				8D90110523D9E59C004FB68E /* AcquisitionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +213,7 @@
 				8D91CDA923CF129100EB85C4 /* GoogleService-Info.plist in Resources */,
 				8D91CD9923CEF61600EB85C4 /* Assets.xcassets in Resources */,
 				8D91CD9723CEF61400EB85C4 /* Main.storyboard in Resources */,
+				8D90110D23DA039E004FB68E /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +269,10 @@
 				8D91CDAB23CF633200EB85C4 /* ProfileViewController.swift in Sources */,
 				8D91CDA723CF0C9800EB85C4 /* HomeViewController.swift in Sources */,
 				8D91CDAD23CF8CC200EB85C4 /* PatientsViewController.swift in Sources */,
+				8D90110C23DA039E004FB68E /* ListCell.swift in Sources */,
 				8D91CD9423CEF61400EB85C4 /* ViewController.swift in Sources */,
+				8D90110623D9E59C004FB68E /* AcquisitionViewController.swift in Sources */,
+				8D90110823D9F0F7004FB68E /* PatientsList.swift in Sources */,
 				8D91CDAF23CF941100EB85C4 /* LocalReviewsViewController.swift in Sources */,
 				8D91CDB123CF9D0000EB85C4 /* CreatePatientViewController.swift in Sources */,
 				8D91CDB323CF9E4700EB85C4 /* NotesViewController.swift in Sources */,

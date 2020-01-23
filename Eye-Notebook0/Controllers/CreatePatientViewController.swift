@@ -10,7 +10,8 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 class CreatePatientViewController: UIViewController {
-    var ref: DatabaseReference! = Database.database().reference().child("PatientsProfile")
+    var ref: DatabaseReference!
+        
     var gender = "Male"
     @IBOutlet weak var fstNameTF: UITextField!
     
@@ -38,7 +39,7 @@ class CreatePatientViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "New Patient"
-
+        ref = Database.database().reference().child("PatientsProfile")
         // Do any additional setup after loading the view.
     }
     
@@ -73,7 +74,7 @@ class CreatePatientViewController: UIViewController {
 
     @IBAction func createSaveKey(_ sender: UIBarButtonItem) {
         let sex = gender
-        if let firstname = fstNameTF.text, let lastname = lastNameTF.text,let patientId = patientID.text, let dOfBirth = dobTF.text,let recommendations = recommendTF.text, let visualActivity = visualTF.text{
+        if let firstname = fstNameTF.text, let lastname = lastNameTF.text,let patientId = patientID.text, let dOfBirth = dobTF.text,let recommendations = recommendTF.text, let visualActivity = visualTF.text,let assessments = AssesmentTF.text{
             let patientProDict = [
                 "firstname": firstname,
                 "lastname": lastname,
@@ -83,10 +84,11 @@ class CreatePatientViewController: UIViewController {
                 //                        "right-eyeImage":****,
                 "sex":sex,
                 "recommendations": recommendations,
-                "visualActivity":visualActivity
+                "visualActivity":visualActivity,
+                "assessments":assessments
             ]
             
-            self.ref.child(firstname).childByAutoId().setValue(patientProDict) { (error, reference) in
+            self.ref.child("sriharsha").child(firstname).childByAutoId().setValue(patientProDict) { (error, reference) in
                 if let e1 = error{
                     print(e1)
                 }

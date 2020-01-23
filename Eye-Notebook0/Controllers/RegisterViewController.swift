@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 class RegisterViewController: UIViewController {
 //    let defaults = UserDefaults.standard
-    var ref: DatabaseReference! = Database.database().reference()
+    var ref: DatabaseReference! 
     @IBOutlet weak var firstnameTextField: UITextField!
     
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -28,6 +28,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Eye-notebook"
+        ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
     

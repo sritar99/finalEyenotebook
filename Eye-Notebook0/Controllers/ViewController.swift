@@ -12,8 +12,8 @@ import Firebase
 import FirebaseDatabase
 
 class ViewController: UIViewController {
-    var ref: DatabaseReference! = Database.database().reference()
-    
+    var ref: DatabaseReference!
+            
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var userNameTextField: UITextField!
@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     var charIndex = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ref = Database.database().reference()
+
 //        titleLabel.text="Eye-notebook"
                 titleLabel.text = ""
                 let text = "Eye-notebook"

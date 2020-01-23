@@ -10,11 +10,12 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 class NotesViewController: UIViewController {
-    var ref: DatabaseReference! = Database.database().reference()
+    var ref: DatabaseReference!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Notes"
-
+            ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
     
