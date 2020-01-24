@@ -31,6 +31,12 @@ class NewExaminationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(name!)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+
+        view.addGestureRecognizer(tap)
         ref = Database.database().reference().child("EyeImagesCollection")
         
         title = "New Examination"

@@ -22,11 +22,18 @@ class ViewController: UIViewController {
     var charIndex = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         ref = Database.database().reference()
 
 //        titleLabel.text="Eye-notebook"
                 titleLabel.text = ""
                 let text = "Eye-notebook"
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+
+        view.addGestureRecognizer(tap)
         
                 for i in text{
                     Timer.scheduledTimer(withTimeInterval: 0.1 * Double(charIndex), repeats: false) { (timer) in
@@ -36,6 +43,10 @@ class ViewController: UIViewController {
                 }
         
         // Do any additional setup after loading the view.
+    }
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
     @IBAction func registerKeyPress(_ sender: UIButton) {

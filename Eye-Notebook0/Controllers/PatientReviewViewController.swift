@@ -33,14 +33,18 @@ class PatientReviewViewController: UIViewController {
     @IBOutlet weak var assessmentsLabel: UILabel!
     
     
-//    @IBAction func acquisitionKey(_ sender: UIButton) {
-//        performSegue(withIdentifier: "goToImages", sender: self)
-//    }
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Patient Review"
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+
+        view.addGestureRecognizer(tap)
         ref = Database.database().reference().child("PatientsProfile").child("sriharsha").child(name)
         
         ref.observe(.childAdded) { (snapShot) in
