@@ -10,13 +10,20 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import Foundation
+import FirebaseStorage
 class AcquisitionViewController: UIViewController {
     var ref: DatabaseReference!
+    var name : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Acquisitions"
-        ref = Database.database().reference()
         // Do any additional setup after loading the view.
+        
+        ref = Database.database().reference().child("EyeImagesCollection").child("sriharsha").child(name)
+        
+        
+        
     }
     
 

@@ -13,6 +13,7 @@ class PatientReviewViewController: UIViewController {
     
     var ref: DatabaseReference!
     
+    var name : String!
     
     @IBOutlet weak var lastNameLabel: UILabel!
     
@@ -40,7 +41,7 @@ class PatientReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Patient Review"
-        ref = Database.database().reference().child("PatientsProfile").child("sriharsha").child("a")
+        ref = Database.database().reference().child("PatientsProfile").child("sriharsha").child(name)
         
         ref.observe(.childAdded) { (snapShot) in
             let snapShotValue = snapShot.value as! Dictionary<String,String>
@@ -54,16 +55,7 @@ class PatientReviewViewController: UIViewController {
             self.assessmentsLabel.text = snapShotValue["assessments"]!
         }
         
-        
-//            firstNameLabel.text =
-//            lastNameLabel.text =
-//            patientIdLabel.text =
-//            dobLabel.text =
-//            sexlabel.text =
-//            recommendLabel.text =
-//            vactivityLabel.text =
-//            assessmentsLabel.text =
-        
+                
         
         
         // Do any additional setup after loading the view.

@@ -1,45 +1,45 @@
 //
-//  LocalReviewsViewController.swift
+//  PatientsViewController.swift
 //  Eye-Notebook0
 //
-//  Created by Sri Harsha on 16/01/20.
+//  Created by Sri Harsha on 15/01/20.
 //  Copyright © 2020 Sri Harsha. All rights reserved.
 //
+import Firebase
 import Foundation
 import UIKit
 import FirebaseDatabase
-import Firebase
 class LocalReviewsViewController: UIViewController, UITableViewDelegate {
     var ref: DatabaseReference!
         
+    var name : String!
+    
     var list :[PatientsList] = [
-     PatientsList(patientId: "abcde", body: "harsha"),
-     PatientsList(patientId: "abcde", body: "harsh"),
-     PatientsList(patientId: "abcde", body: "hars")
+     PatientsList(patientId: "abcde", body: "john"),
     ]
     
-    
+    @IBOutlet weak var patientsTable: UITableView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        title = "LocalReviews"
+        title = "Patients"
         patientsTable.dataSource = self
         patientsTable.delegate = self
-        
         patientsTable.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
-        ref = Database.database().reference().child("PatientsProfile").child("sriharsha")
+        ref = Database.database().reference().child("PatientsProfile").child("sriharsha").child("PatientsNames")
         
-        
-        loadList()
+        ref.observe(.childAdded) { (snapshot) in
+            let snapshotVal = snapshot.value as! Dictionary<String,String>
+            self.list.append(PatientsList(patientId: "123", body: snapshotVal["Name"]!))
+            self.patientsTable.reloadData()
+        }
+
         // Do any additional setup after loading the view.
     }
     
-    func loadList(){
-        
-    }
-    
-    @IBOutlet weak var patientsTable: UITableView!
+  
     
     /*
     // MARK: - Navigation
@@ -51,11 +51,20 @@ class LocalReviewsViewController: UIViewController, UITableViewDelegate {
     }
     */
     
+    
        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     // go to show patients review details that are retrived from database by performing segues
+        
+        let number = indexPath.row
+        name = list[number].body
         performSegue(withIdentifier: "goToReview", sender: self)
-
        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vcDestinationn = segue.destination as? PatientReviewViewController {
+            vcDestinationn.name = name
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,10 +72,9 @@ class LocalReviewsViewController: UIViewController, UITableViewDelegate {
     }
 
 }
-
 extension LocalReviewsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -77,10 +85,10 @@ extension LocalReviewsViewController: UITableViewDataSource{
         return cell
     }
     
+
+    
     
 }
-
-
 
 
 

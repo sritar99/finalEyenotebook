@@ -24,6 +24,7 @@ target 'Eye-Notebook0' do
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 end
 
 

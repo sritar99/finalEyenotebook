@@ -44,6 +44,19 @@ class CreatePatientViewController: UIViewController {
     }
     
     
+    
+    @IBAction func forNewKey(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToExam", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vcDestination = segue.destination as? NewExaminationViewController {
+            vcDestination.name = fstNameTF.text
+        }
+    }
+    
+    
+    
     @IBAction func MaleKeyPress(_ sender: UIButton) {
         
         if femaleCheck.isSelected{
@@ -87,13 +100,21 @@ class CreatePatientViewController: UIViewController {
                 "visualActivity":visualActivity,
                 "assessments":assessments
             ]
+            self.ref.child("sriharsha").child("PatientsNames").childByAutoId().setValue(["Name" : firstname]) { (error, refer) in
+                if let e1 = error{
+                    print(e1)
+                }
+                else {
+                    print("profile Added Successfully")
+                }
+            }
             
             self.ref.child("sriharsha").child(firstname).childByAutoId().setValue(patientProDict) { (error, reference) in
                 if let e1 = error{
                     print(e1)
                 }
                 else {
-                    print("Patient profile Added Successfully")
+                    print("profile details Added Successfully")
                 }
             }
             
