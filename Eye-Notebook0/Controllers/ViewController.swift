@@ -28,6 +28,7 @@ class ViewController: UIViewController {
 //        titleLabel.text="Eye-notebook"
                 titleLabel.text = ""
                 let text = "Eye-notebook"
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
 
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.

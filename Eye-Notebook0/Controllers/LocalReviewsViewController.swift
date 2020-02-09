@@ -15,7 +15,21 @@ class LocalReviewsViewController: UIViewController, UITableViewDelegate {
     var name : String!
     
     var list :[PatientsList] = [
-     PatientsList(patientId: "abcde", body: "john"),
+     PatientsList(patientId: "vs18", body: "john"),
+     PatientsList(patientId: "ad21", body: "Rickey"),
+     PatientsList(patientId: "op12", body: "Giben"),
+     PatientsList(patientId: "op10", body: "Gerald"),
+     PatientsList(patientId: "vs16", body: "Sneji"),
+     PatientsList(patientId: "fs19", body: "Rosy"),
+     PatientsList(patientId: "ou28", body: "lucy"),
+     PatientsList(patientId: "ou30", body: "Kichen"),
+     PatientsList(patientId: "fs20", body: "Keran"),
+     PatientsList(patientId: "op13", body: "Unah"),
+     PatientsList(patientId: "ou32", body: "laaver"),
+     PatientsList(patientId: "fs21", body: "Joshy"),
+     PatientsList(patientId: "op9", body: "Brad"),
+     PatientsList(patientId: "ou31", body: "Sam"),
+
     ]
     
     @IBOutlet weak var patientsTable: UITableView!
@@ -23,7 +37,7 @@ class LocalReviewsViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        title = "Patients"
+        title = "Patients & Reviews"
         patientsTable.dataSource = self
         patientsTable.delegate = self
         patientsTable.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")

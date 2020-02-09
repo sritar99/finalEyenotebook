@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AuZ-Hp-v1F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AuZ-Hp-v1F">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -713,9 +713,6 @@
                                 <state key="normal" title="Acquisitions">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="sD6-DE-0Zn" kind="show" identifier="goToImages" id="sOK-qN-dkC"/>
-                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VB8-rL-k2C">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -738,6 +735,7 @@
                         <outlet property="recommendLabel" destination="GC6-jb-8aw" id="iuJ-Y2-06Y"/>
                         <outlet property="sexlabel" destination="VQK-zm-u8c" id="5xl-hR-4ys"/>
                         <outlet property="vactivityLabel" destination="Vpa-ed-gff" id="O6o-0b-eNT"/>
+                        <segue destination="sD6-DE-0Zn" kind="show" identifier="goToAcquisition" id="ef7-F7-u6M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKf-rk-8gs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1043,9 +1041,8 @@
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qFj-MN-9qo"/>
         <segue reference="CYM-k6-Dye"/>
-        <segue reference="6SV-DY-oRW"/>
-        <segue reference="94B-fC-aQ2"/>
+        <segue reference="rn9-nD-DAr"/>
+        <segue reference="QMi-CD-U0W"/>
     </inferredMetricsTieBreakers>
 </document>
