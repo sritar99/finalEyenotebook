@@ -15,19 +15,14 @@ class PatientsViewController: UIViewController, UITableViewDelegate {
     var name : String!
     
     var list :[PatientsList] = [
-     PatientsList(patientId: "vs18", body: "john"),
-     PatientsList(patientId: "ad21", body: "Rickey"),
-     PatientsList(patientId: "op12", body: "Giben"),
-     PatientsList(patientId: "op10", body: "Gerald"),
-     PatientsList(patientId: "vs16", body: "Sneji"),
-     PatientsList(patientId: "fs19", body: "Rosy"),
-     PatientsList(patientId: "ou28", body: "lucy"),
-     PatientsList(patientId: "ou30", body: "Kichen"),
-     PatientsList(patientId: "fs20", body: "Keran"),
-     PatientsList(patientId: "op13", body: "Unah"),
-     PatientsList(patientId: "ou32", body: "laaver"),
-     PatientsList(patientId: "fs21", body: "Joshy"),
-     PatientsList(patientId: "op9", body: "Brad"),
+//     PatientsList(patientId: "vs18", body: "john"),
+//     PatientsList(patientId: "ad21", body: "Rickey"),
+//     PatientsList(patientId: "op12", body: "Giben"),
+//     PatientsList(patientId: "op10", body: "Gerald"),
+//     PatientsList(patientId: "vs16", body: "Sneji"),
+//     PatientsList(patientId: "ou28", body: "lucy"),
+//     PatientsList(patientId: "fs20", body: "Keran"),
+//     PatientsList(patientId: "op9", body: "Brad"),
      PatientsList(patientId: "ou31", body: "Sam"),
     ]
     
@@ -41,11 +36,11 @@ class PatientsViewController: UIViewController, UITableViewDelegate {
         patientsTable.delegate = self
         patientsTable.register(UINib(nibName: "ListCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
-        ref = Database.database().reference().child("PatientsProfile").child("sriharsha").child("PatientsNames")
-        
+        ref = Database.database().reference().child("PatientsProfile").child(Auth.auth().currentUser!.uid).child("PatientsNames")
+        var patid : String = Auth.auth().currentUser!.uid
         ref.observe(.childAdded) { (snapshot) in
             let snapshotVal = snapshot.value as! Dictionary<String,String>
-            self.list.append(PatientsList(patientId: "123", body: snapshotVal["Name"]!))
+            self.list.append(PatientsList(patientId: String(patid), body: snapshotVal["Name"]!))
             self.patientsTable.reloadData()
         }
 

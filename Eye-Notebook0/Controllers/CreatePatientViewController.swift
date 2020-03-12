@@ -43,6 +43,8 @@ class CreatePatientViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        NewKey.layer.cornerRadius = 10
+        NewKey.clipsToBounds = true
 
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
@@ -54,6 +56,7 @@ class CreatePatientViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBOutlet weak var NewKey: UIButton!
     
     
     @IBAction func forNewKey(_ sender: UIButton) {
@@ -111,7 +114,7 @@ class CreatePatientViewController: UIViewController {
                 "visualActivity":visualActivity,
                 "assessments":assessments
             ]
-            self.ref.child("sriharsha").child("PatientsNames").childByAutoId().setValue(["Name" : firstname]) { (error, refer) in
+            self.ref.child(Auth.auth().currentUser!.uid).child("PatientsNames").childByAutoId().setValue(["Name" : firstname]) { (error, refer) in
                 if let e1 = error{
                     print(e1)
                 }
@@ -120,7 +123,7 @@ class CreatePatientViewController: UIViewController {
                 }
             }
             
-            self.ref.child("sriharsha").child(firstname).childByAutoId().setValue(patientProDict) { (error, reference) in
+            self.ref.child(Auth.auth().currentUser!.uid).child(firstname).childByAutoId().setValue(patientProDict) { (error, reference) in
                 if let e1 = error{
                     print(e1)
                 }

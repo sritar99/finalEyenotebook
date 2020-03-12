@@ -217,7 +217,7 @@ extension NewExaminationViewController{
     func saveLImage(name: String, leftImageUrl: URL,completion: @escaping ((_ url:URL?) -> ())){
         let dict = ["name":name, "leftImageUrl":leftImageUrl.absoluteString] as [String: Any]
         
-        self.ref.child("sriharsha").child("EyeImages").childByAutoId().setValue(dict) { (error, refer) in
+        self.ref.child(Auth.auth().currentUser!.uid).child("EyeImages").childByAutoId().setValue(dict) { (error, refer) in
             if let e1 = error{
                 print(e1)
             }
@@ -231,7 +231,7 @@ extension NewExaminationViewController{
     func saveRImage(name: String, rightImageUrl: URL,completion: @escaping ((_ url:URL?) -> ())){
         let dict = ["name":name,"rightImageUrl":rightImageUrl.absoluteString] as [String: Any]
 
-        self.ref.child("sriharsha").child("EyeImages").childByAutoId().setValue(dict) { (error, refer) in
+        self.ref.child(Auth.auth().currentUser!.uid).child("EyeImages").childByAutoId().setValue(dict) { (error, refer) in
             if let e1 = error{
                 print(e1)
             }

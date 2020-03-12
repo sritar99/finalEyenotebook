@@ -59,7 +59,7 @@ class RegisterViewController: UIViewController {
                         "medicalSpeciality": speciality,
                         "institution": institution]
                     
-                    self.ref.child("DoctorsProfile").child(firstname).childByAutoId().setValue(profileDict) { (error, reference) in
+                    self.ref.child("DoctorsProfile").child(Auth.auth().currentUser!.uid).childByAutoId().setValue(profileDict) { (error, reference) in
                         if let e1 = error{
                             print(e1)
                         }

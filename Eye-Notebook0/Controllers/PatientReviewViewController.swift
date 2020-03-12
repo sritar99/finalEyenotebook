@@ -33,19 +33,24 @@ class PatientReviewViewController: UIViewController {
     @IBOutlet weak var assessmentsLabel: UILabel!
     
     
-
+    @IBAction func KeyPress(_ sender: UIButton) {
+    }
+    
+    @IBOutlet weak var AcqKey: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Patient Review"
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        AcqKey.layer.cornerRadius = 10
+        AcqKey.clipsToBounds = true
 
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
 
         view.addGestureRecognizer(tap)
-        ref = Database.database().reference().child("PatientsProfile").child("sriharsha").child(name)
+        ref = Database.database().reference().child("PatientsProfile").child(Auth.auth().currentUser!.uid).child(name)
         
         ref.observe(.childAdded) { (snapShot) in
             let snapShotValue = snapShot.value as! Dictionary<String,String>

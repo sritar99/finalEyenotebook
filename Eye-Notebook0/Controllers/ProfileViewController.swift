@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
-        ref = Database.database().reference().child("DoctorsProfile").child("sriharsha")
+        ref = Database.database().reference().child("DoctorsProfile").child(Auth.auth().currentUser!.uid)
         
         
         ref.observe(.childAdded) { (snapShot) in

@@ -23,7 +23,8 @@ class HomeViewController: UIViewController {
         
         currentUserLabel.text = Auth.auth().currentUser?.email
         // Do any additional setup after loading the view.
-        
+        ProfileKey.layer.cornerRadius = 10
+        ProfileKey.clipsToBounds = true
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
 
@@ -59,5 +60,9 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    @IBOutlet weak var ProfileKey: UIButton!
+
 
 }
