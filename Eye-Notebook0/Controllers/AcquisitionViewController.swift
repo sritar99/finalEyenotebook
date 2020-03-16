@@ -11,22 +11,56 @@ import Firebase
 import FirebaseDatabase
 import Foundation
 import FirebaseStorage
+import Kingfisher
 class AcquisitionViewController: UIViewController {
     var ref: DatabaseReference!
     var name : String!
+    var LeftImage:String!
+    var RightImage:String!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Acquisitions"
         // Do any additional setup after loading the view.
         
-        ref = Database.database().reference().child("EyeImagesCollection").child("sriharsha").child(name)
+//        ref = Database.database().reference().child("EyeImagesCollection").child("sriharsha").child(name)
+//
+//        var LImageModel: ImageModel?{
+//            didSet{
+//                let url = URL(string: LImageModel!.leftImageUrl!)
+//                KingfisherManager.shared.retrieveImage(with: url as! Resource, options: nil, progressBlock: nil) {(image, error, cache, imageURL) in
+//                    self.leftImage.image = image
+//                }
+//            }
+//        }
+//
+//        var RImageModel: RImageModel?{
+//            didSet{
+//                let url = URL(string: RImageModel!.rightImageUrl!)
+//                KingfisherManager.shared.retrieveImage(with: url as! Resource, options: nil, progressBlock: nil) { (image, error, cache, imageURL) in
+//                    self.rightImage.image = image
+//                }
+//            }
+//        }
         
-        
+        var url = URL(string: LeftImage)
+        KingfisherManager.shared.retrieveImage(with: url!, options: nil, progressBlock: nil) {(image, error, cache, imageURL) in
+            self.leftImage.image = image
+        }
+
+        var anotherurl = URL(string: RightImage)
+        KingfisherManager.shared.retrieveImage(with: url!, options: nil, progressBlock: nil) {(image, error, cache, imageURL) in
+            self.rightImage.image = image
+        }
         
     }
+        
+        
     
-
+    @IBOutlet weak var rightImage: UIImageView!
+    
+    @IBOutlet weak var leftImage: UIImageView!
     /*
     // MARK: - Navigation
 

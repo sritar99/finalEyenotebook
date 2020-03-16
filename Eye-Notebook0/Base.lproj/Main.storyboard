@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EyeNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,7 +120,7 @@
         <!--Register View Controller-->
         <scene sceneID="Rpr-i3-D2M">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yCZ-82-KkV" customClass="RegisterViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yCZ-82-KkV" customClass="RegisterViewController" customModule="EyeNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WTt-RN-Rg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,7 +267,7 @@
         <!--Home View Controller-->
         <scene sceneID="kTM-2j-NiJ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="LaY-da-XI6" customClass="HomeViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="LaY-da-XI6" customClass="HomeViewController" customModule="EyeNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="24F-HV-5dP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -409,7 +409,7 @@
         <!--Profile View Controller-->
         <scene sceneID="lz5-tF-nej">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="gjO-66-s8A" customClass="ProfileViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gjO-66-s8A" customClass="ProfileViewController" customModule="EyeNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1b1-hP-Gv6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -627,7 +627,7 @@
         <!--Patients View Controller-->
         <scene sceneID="WxI-kP-mPa">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Vhe-OC-mY5" customClass="PatientsViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Vhe-OC-mY5" customClass="PatientsViewController" customModule="EyeNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ns-L9-RFC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -655,7 +655,7 @@
         <!--Local Reviews View Controller-->
         <scene sceneID="iep-NI-r8c">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="V40-Of-oqu" customClass="LocalReviewsViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="V40-Of-oqu" customClass="LocalReviewsViewController" customModule="EyeNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yxa-ab-Nwc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -690,7 +690,7 @@
         <!--Patient Review View Controller-->
         <scene sceneID="Ew2-Zl-NI1">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="h88-1N-itA" customClass="PatientReviewViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="h88-1N-itA" customClass="PatientReviewViewController" customModule="EyeNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n96-RS-pLh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -817,6 +817,7 @@
                                 </state>
                                 <connections>
                                     <action selector="KeyPress:" destination="h88-1N-itA" eventType="touchUpInside" id="NwO-QL-01M"/>
+                                    <action selector="acKey:" destination="h88-1N-itA" eventType="touchUpInside" id="afu-JA-bQj"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VB8-rL-k2C">
@@ -841,7 +842,7 @@
                         <outlet property="recommendLabel" destination="GC6-jb-8aw" id="iuJ-Y2-06Y"/>
                         <outlet property="sexlabel" destination="VQK-zm-u8c" id="5xl-hR-4ys"/>
                         <outlet property="vactivityLabel" destination="Vpa-ed-gff" id="O6o-0b-eNT"/>
-                        <segue destination="sD6-DE-0Zn" kind="show" identifier="goToAcquisition" id="ef7-F7-u6M"/>
+                        <segue destination="sD6-DE-0Zn" kind="show" identifier="goToImages" id="Jyb-6S-y0M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKf-rk-8gs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -851,7 +852,7 @@
         <!--Acquisition View Controller-->
         <scene sceneID="z85-Kz-YKz">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="sD6-DE-0Zn" customClass="AcquisitionViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="sD6-DE-0Zn" customClass="AcquisitionViewController" customModule="EyeNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sHl-Rt-sgB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -891,6 +892,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="6tX-tK-Aay"/>
                     <connections>
+                        <outlet property="leftImage" destination="0ac-uv-OrZ" id="hDB-wr-Qw7"/>
+                        <outlet property="rightImage" destination="uZJ-98-NzE" id="K48-II-hsR"/>
                         <segue destination="h88-1N-itA" kind="show" identifier="goToReview" id="6SV-DY-oRW"/>
                     </connections>
                 </viewController>
@@ -901,7 +904,7 @@
         <!--Create Patient View Controller-->
         <scene sceneID="RSW-6e-DWo">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yQO-Pm-XNq" customClass="CreatePatientViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yQO-Pm-XNq" customClass="CreatePatientViewController" customModule="EyeNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mth-Gz-yIL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1115,7 +1118,7 @@
         <!--New Examination View Controller-->
         <scene sceneID="XE7-2d-f6Y">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="aQP-v9-6oN" customClass="NewExaminationViewController" customModule="Eye_Notebook0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="aQP-v9-6oN" customClass="NewExaminationViewController" customModule="EyeNotebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hnV-zG-zQE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1184,8 +1187,9 @@
         <image name="upload" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Jyb-6S-y0M"/>
         <segue reference="Tl5-eW-uKz"/>
-        <segue reference="rn9-nD-DAr"/>
+        <segue reference="6SV-DY-oRW"/>
         <segue reference="94B-fC-aQ2"/>
     </inferredMetricsTieBreakers>
 </document>

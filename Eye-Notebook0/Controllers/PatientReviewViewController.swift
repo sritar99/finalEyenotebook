@@ -12,8 +12,11 @@ import Firebase
 class PatientReviewViewController: UIViewController {
     
     var ref: DatabaseReference!
-    
+    var arrData = [ImageModel]()
+    var arrData1 = [RImageModel]()
     var name : String!
+    var Lurl:String!
+    var Rurl:String!
     
     @IBOutlet weak var lastNameLabel: UILabel!
     
@@ -37,6 +40,7 @@ class PatientReviewViewController: UIViewController {
     }
     
     @IBOutlet weak var AcqKey: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -63,19 +67,56 @@ class PatientReviewViewController: UIViewController {
             self.vactivityLabel.text = snapShotValue["visualActivity"]!
             self.assessmentsLabel.text = snapShotValue["assessments"]!
         }
-        
                 
-        
-        
+        ref = Database.database().reference().child("EyeImagesCollection").child(Auth.auth().currentUser!.uid).child("EyeImages")
+//        func getAllFIRData(){
+            self.ref.queryOrderedByKey().observe(.value) { (snapshot) in
+                self.arrData.removeAll()
+                if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
+                    for snap in snapShot{
+                        if let mainDict = snap.value as? [String:AnyObject]{
+                            let name = mainDict["name"] as? String
+                            let leftImageUrl = mainDict["leftImageUrl"] as? String ?? ""
+                            self.arrData.append(ImageModel(name: name!,leftImageUrl: leftImageUrl))
+                            self.Lurl = leftImageUrl
+                            print(leftImageUrl)
+                        }
+                    }
+                }
+            }
+//        }
         // Do any additional setup after loading the view.
-        
-        
-        
+        ref = Database.database().reference().child("EyeImagesCollection").child(Auth.auth().currentUser!.uid).child("EyeImages")
+        self.ref.queryOrderedByKey().observe(.value) { (snapshot) in
+            self.arrData1.removeAll()
+            if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
+                for snap in snapShot{
+                    if let mainDict = snap.value as? [String:AnyObject]{
+                        let name = mainDict["name"] as? String
+                        let rightImageUrl = mainDict["rightImageUrl"] as? String ?? ""
+                        self.arrData1.append(RImageModel(name: name!, rightImageUrl: rightImageUrl))
+                        self.Rurl = rightImageUrl
+                        print(rightImageUrl)
+                    }
+                }
+            }
+        }
         
         
     }
     
 
+    
+    @IBAction func acKey(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToImages", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vcDestination = segue.destination as? AcquisitionViewController {
+            vcDestination.LeftImage = self.Lurl
+            vcDestination.RightImage = self.Rurl
+        }
+    }
+            
     /*
     // MARK: - Navigation
 

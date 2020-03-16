@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D6A5FBD241FC335007154C9 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A5FBC241FC335007154C9 /* ImageModel.swift */; };
+		8D6A5FBF241FDC8B007154C9 /* RImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A5FBE241FDC8B007154C9 /* RImageModel.swift */; };
 		8D90110623D9E59C004FB68E /* AcquisitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90110523D9E59C004FB68E /* AcquisitionViewController.swift */; };
 		8D90110823D9F0F7004FB68E /* PatientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90110723D9F0F7004FB68E /* PatientsList.swift */; };
 		8D90110C23DA039E004FB68E /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D90110A23DA039E004FB68E /* ListCell.swift */; };
@@ -33,11 +35,13 @@
 /* Begin PBXFileReference section */
 		615C5C18651A70719C1AF245 /* Pods-Eye-Notebook0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eye-Notebook0.debug.xcconfig"; path = "Target Support Files/Pods-Eye-Notebook0/Pods-Eye-Notebook0.debug.xcconfig"; sourceTree = "<group>"; };
 		82A3313E7AEF0FD2FD5E7DE9 /* Pods_Eye_Notebook0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eye_Notebook0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D6A5FBC241FC335007154C9 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		8D6A5FBE241FDC8B007154C9 /* RImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RImageModel.swift; sourceTree = "<group>"; };
 		8D90110523D9E59C004FB68E /* AcquisitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcquisitionViewController.swift; sourceTree = "<group>"; };
 		8D90110723D9F0F7004FB68E /* PatientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsList.swift; sourceTree = "<group>"; };
 		8D90110A23DA039E004FB68E /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		8D90110B23DA039E004FB68E /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
-		8D91CD8C23CEF61400EB85C4 /* Eye-Notebook0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eye-Notebook0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D91CD8C23CEF61400EB85C4 /* EyeNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D91CD8F23CEF61400EB85C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D91CD9123CEF61400EB85C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8D91CD9323CEF61400EB85C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +105,7 @@
 		8D91CD8D23CEF61400EB85C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D91CD8C23CEF61400EB85C4 /* Eye-Notebook0.app */,
+				8D91CD8C23CEF61400EB85C4 /* EyeNotebook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +140,8 @@
 				8D91CDB423CF9FBD00EB85C4 /* PatientReviewViewController.swift */,
 				8D91CDB623CFA18D00EB85C4 /* NewExaminationViewController.swift */,
 				8D90110523D9E59C004FB68E /* AcquisitionViewController.swift */,
+				8D6A5FBC241FC335007154C9 /* ImageModel.swift */,
+				8D6A5FBE241FDC8B007154C9 /* RImageModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,7 +174,7 @@
 			);
 			name = "Eye-Notebook0";
 			productName = "Eye-Notebook0";
-			productReference = 8D91CD8C23CEF61400EB85C4 /* Eye-Notebook0.app */;
+			productReference = 8D91CD8C23CEF61400EB85C4 /* EyeNotebook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -274,6 +280,7 @@
 				8D90110623D9E59C004FB68E /* AcquisitionViewController.swift in Sources */,
 				8D90110823D9F0F7004FB68E /* PatientsList.swift in Sources */,
 				8D91CDAF23CF941100EB85C4 /* LocalReviewsViewController.swift in Sources */,
+				8D6A5FBF241FDC8B007154C9 /* RImageModel.swift in Sources */,
 				8D91CDB123CF9D0000EB85C4 /* CreatePatientViewController.swift in Sources */,
 				8D91CDB323CF9E4700EB85C4 /* NotesViewController.swift in Sources */,
 				8D91CDB723CFA18D00EB85C4 /* NewExaminationViewController.swift in Sources */,
@@ -281,6 +288,7 @@
 				8D91CD9023CEF61400EB85C4 /* AppDelegate.swift in Sources */,
 				8D91CD9223CEF61400EB85C4 /* SceneDelegate.swift in Sources */,
 				8D91CDA423CF07EB00EB85C4 /* RegisterViewController.swift in Sources */,
+				8D6A5FBD241FC335007154C9 /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +442,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sriharsha.Eye-Notebook0";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EyeNotebook;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sriharsha.Eye-Notebook0";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EyeNotebook;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
